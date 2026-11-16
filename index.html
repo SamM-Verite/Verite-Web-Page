@@ -37,141 +37,158 @@
 <script>document.documentElement.classList.add('js')</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Inter+Tight:wght@600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
-<link rel="stylesheet" href="/assets/css/site.css?v=20261015a">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Inter+Tight:wght@400;500;600;800&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=20261116a">
 </head>
 <body>
-<header class="site"><div class="wrap bar">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site nav">
   <a href="/" class="wordmark">Vérité<span class="dot">.</span></a>
-  <nav class="top" aria-label="Primary">
+  <nav class="nav__links" aria-label="Primary">
     <a href="/" aria-current="page">Home</a><a href="/services/">Services</a><a href="/use-cases/">Use Cases</a><a href="/about/">About</a><a href="/contact/">Contact</a>
   </nav>
-  <div class="cta"><a class="btn btn-primary btn-sm" href="/contact/">Start a conversation</a></div>
+  <a class="btn btn--sm nav__cta" href="/contact/">Start a conversation<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a>
   <details class="menu">
-    <summary aria-label="Open menu"><span class="menu__bars"></span></summary>
-    <nav class="menu__nav" aria-label="Primary">
-      <a href="/" aria-current="page">Home</a><a href="/services/">Services</a><a href="/use-cases/">Use Cases</a><a href="/about/">About</a><a href="/contact/">Contact</a>
-      <a class="menu__cta" href="/contact/">Start a conversation</a>
+    <summary class="menu__toggle" aria-label="Open menu">Menu</summary>
+    <nav class="menu__panel" aria-label="Primary">
+      <ul class="menu__list">
+        <li><a href="/" aria-current="page"><span class="label" aria-hidden="true">01</span><span>Home</span></a></li>
+        <li><a href="/services/"><span class="label" aria-hidden="true">02</span><span>Services</span></a></li>
+        <li><a href="/use-cases/"><span class="label" aria-hidden="true">03</span><span>Use Cases</span></a></li>
+        <li><a href="/about/"><span class="label" aria-hidden="true">04</span><span>About</span></a></li>
+        <li><a href="/contact/"><span class="label" aria-hidden="true">05</span><span>Contact</span></a></li>
+      </ul>
+      <div class="menu__cta"><a class="btn" href="/contact/">Start a conversation<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a></div>
     </nav>
   </details>
-</div></header>
+</header>
 
-<main>
+<main id="main">
 <!-- HERO -->
-<section id="hero" class="hero">
+<section id="hero" class="band band--light hero">
   <canvas id="hero-net" class="hero-net" aria-hidden="true" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none"></canvas>
-  <div class="wrap" style="position:relative;z-index:1">
-    <h1 class="reveal d1">Part of your team, shaped by your needs</h1>
-    <p class="lede reveal d2">We identify practical AI use cases, build them with you, and keep them running, freeing you up to focus on the business.</p>
-    <div class="cta-row reveal d3">
-      <a class="btn btn-primary" href="/contact/">Start a conversation
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      <a class="btn btn-ghost" href="/services/">See how we work</a>
+  <div class="container hero__inner">
+    <div class="section-head section-head--hero section-head--solo">
+      <h1 class="reveal d1">Part of your team, shaped by <em class="accent">your needs</em></h1>
+      <div class="section-head__aside">
+        <p class="lede lead reveal d2">We identify practical AI use cases, build them with you, and keep them running, freeing you up to focus on the business.</p>
+      </div>
+      <div class="btn-row reveal d3">
+        <a class="btn" href="/contact/">Start a conversation<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a>
+        <a class="btn btn--secondary" href="/services/">See how we work<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a>
+      </div>
+      <p class="hero__note label reveal d3">Discovery · Implement · Maintain. Evidence over hype, every step.</p>
     </div>
-    <p class="trust reveal d3">Discovery · Implement · Maintain. Evidence over hype, every step.</p>
   </div>
 </section>
 
 <!-- INTRODUCTION (condensed; full version on /about/) -->
-<section id="introduction" class="pad">
-  <div class="wrap">
-    <div class="split">
-      <div class="split__intro reveal">
-        <span class="eyebrow">Introduction</span>
-        <h2>What is Vérité?</h2>
-        <p>Think of us as an AI team you don't have to hire. We work alongside you to find where AI genuinely helps, build it hands-on, and stay on to keep it delivering, so you get real results, not hype.</p>
-        <a class="more" href="/about/">More about Vérité <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-      <div class="points reveal">
-        <div class="point"><h3>Who we are</h3><p>AI specialists focused on what your business actually needs. Practical delivery, not hype.</p></div>
-        <div class="point"><h3>What we do</h3><p>End to end: we map the workflows that matter most, build AI into them, and keep them delivering, so your team gets more done with less.</p></div>
-        <div class="point"><h3>Why now</h3><p>AI's moved beyond search and lookup. It can now transform the workflows a business runs on. But capability is moving faster than most businesses can absorb. The ones that act now will pull ahead. The ones that don't will be left behind.</p></div>
+<section id="introduction" class="band band--light">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Introduction</span>
+      <h2>What is <em class="accent">Vérité</em>?</h2>
+      <div class="section-head__aside">
+        <p class="lead">Think of us as an AI team you don't have to hire. We work alongside you to find where AI genuinely helps, build it hands-on, and stay on to keep it delivering, so you get real results, not hype.</p>
+        <a class="more" href="/about/">More about Vérité <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></a>
       </div>
     </div>
+    <ol class="rows reveal">
+      <li class="row"><span class="row__index label" aria-hidden="true">01</span><h3 class="row__title">Who we are</h3><div class="row__body"><p>AI specialists focused on what your business actually needs. Practical delivery, not hype.</p></div></li>
+      <li class="row"><span class="row__index label" aria-hidden="true">02</span><h3 class="row__title">What we do</h3><div class="row__body"><p>End to end: we map the workflows that matter most, build AI into them, and keep them delivering, so your team gets more done with less.</p></div></li>
+      <li class="row"><span class="row__index label" aria-hidden="true">03</span><h3 class="row__title">Why now</h3><div class="row__body"><p>AI's moved beyond search and lookup. It can now transform the workflows a business runs on. But capability is moving faster than most businesses can absorb. The ones that act now will pull ahead. The ones that don't will be left behind.</p></div></li>
+    </ol>
   </div>
 </section>
 
 <!-- APPROACH (teaser; full version with outputs on /services/) -->
-<section id="approach" class="pad" style="padding-top:0">
-  <div class="wrap">
-    <div class="head"><span class="eyebrow reveal">Our approach</span><h2 class="reveal">How we work</h2><p class="reveal">Three stages, from first look to long-term partnership.</p></div>
-    <div class="timeline">
-      <div class="phase reveal">
-        <div class="phase__node"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-        <div class="phase__body">
-          <div class="phase__meta"><h3>Discovery</h3><span class="chip">Weeks, not months</span></div>
-          <p>We map the workflows your business depends on, find where the friction is, and prioritise what's worth transforming.</p>
-        </div>
-      </div>
-      <div class="phase reveal">
-        <div class="phase__node"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
-        <div class="phase__body">
-          <div class="phase__meta"><h3>Implementation</h3><span class="chip">Typically a few months</span></div>
-          <p>We build AI into the workflows you've chosen, inside the tools your team already uses. Real results, not reports.</p>
-        </div>
-      </div>
-      <div class="phase reveal">
-        <div class="phase__node"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <div class="phase__body">
-          <div class="phase__meta"><h3>Maintenance</h3><span class="chip">Ongoing</span></div>
-          <p>Support that keeps what we've built improving, and helps you bring AI into more of your business over time.</p>
-        </div>
-      </div>
+<section id="approach" class="band band--wash">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow reveal">Our approach</span>
+      <h2 class="reveal">How we work</h2>
+      <p class="section-head__aside lead reveal">Three stages, from first look to long-term partnership.</p>
     </div>
-    <div class="actions reveal"><a class="btn btn-ghost" href="/services/">Explore our services <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+    <ol class="rail">
+      <li class="rail__step reveal">
+        <span class="rail__node" aria-hidden="true"></span>
+        <span class="label" aria-hidden="true">01</span>
+        <h3 class="rail__title">Discovery</h3>
+        <div class="rail__meta"><span class="tag">Weeks, not months</span></div>
+        <p>We map the workflows your business depends on, find where the friction is, and prioritise what's worth transforming.</p>
+      </li>
+      <li class="rail__step reveal">
+        <span class="rail__node" aria-hidden="true"></span>
+        <span class="label" aria-hidden="true">02</span>
+        <h3 class="rail__title">Implementation</h3>
+        <div class="rail__meta"><span class="tag">Typically a few months</span></div>
+        <p>We build AI into the workflows you've chosen, inside the tools your team already uses. Real results, not reports.</p>
+      </li>
+      <li class="rail__step reveal">
+        <span class="rail__node" aria-hidden="true"></span>
+        <span class="label" aria-hidden="true">03</span>
+        <h3 class="rail__title">Maintenance</h3>
+        <div class="rail__meta"><span class="tag">Ongoing</span></div>
+        <p>Support that keeps what we've built improving, and helps you bring AI into more of your business over time.</p>
+      </li>
+    </ol>
+    <div class="btn-row reveal"><a class="btn btn--secondary" href="/services/">Explore our services<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a></div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="tint pad">
-  <div class="wrap">
-    <div class="cta-panel reveal">
+<section class="band band--navy">
+  <div class="container cta__grid">
+    <div class="cta__inner reveal">
       <span class="eyebrow">Get started</span>
-      <h2 style="margin-top:16px">Ready to find your first AI use case?</h2>
-      <p>Tell us about your business and we'll set up a short call to talk through where AI could help.</p>
-      <a class="btn btn-accent" href="/contact/">Get in touch
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <h2 class="t-display">Ready to find your <em class="accent">first AI use case</em>?</h2>
+      <p class="lead">Tell us about your business and we'll set up a short call to talk through where AI could help.</p>
+      <div class="btn-row"><a class="btn" href="/contact/">Get in touch<span class="btn__badge" aria-hidden="true"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4"/></svg></span></a></div>
     </div>
   </div>
 </section>
-
 </main>
 
-<!-- FOOTER -->
-<footer class="site">
-  <div class="wrap footer-inner">
-    <div class="footer-top">
-      <div class="footer-left">
-        <a href="/" class="wordmark">Vérité<span class="dot">.</span></a>
-        <nav class="footer-nav" aria-label="Footer">
+<footer class="site footer band--navy">
+  <div class="container">
+    <div class="footer__top">
+      <a href="/" class="wordmark">Vérité<span class="dot">.</span></a>
+      <div class="footer__cols">
+        <nav class="footer__col" aria-label="Footer">
+          <p class="label footer__title">Pages</p>
           <a href="/">Home</a>
           <a href="/services/">Services</a>
           <a href="/use-cases/">Use Cases</a>
           <a href="/about/">About</a>
           <a href="/contact/">Contact</a>
-          <a class="footer-cta" href="/contact/">Start a conversation</a>
+          <a href="/contact/">Start a conversation</a>
         </nav>
-      </div>
-      <div class="footer-right">
-        <a class="footer-email" href="mailto:enquiries@verite-consulting.com">enquiries@verite-consulting.com</a>
-        <a class="footer-social" href="https://www.linkedin.com/company/v%C3%A9rit%C3%A9-consulting/" target="_blank" rel="noopener noreferrer" aria-label="Vérité on LinkedIn">
-          <!-- Neutral external-link icon (not the LinkedIn brand mark). Paste LinkedIn's official brand SVG here to use the exact logo. -->
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="9" y1="15" x2="15" y2="9"/><polyline points="10 9 15 9 15 14"/></svg>
-        </a>
+        <div class="footer__col">
+          <p class="label footer__title">Contact</p>
+          <a href="mailto:enquiries@verite-consulting.com">enquiries@verite-consulting.com</a>
+          <a class="footer__social" href="https://www.linkedin.com/company/v%C3%A9rit%C3%A9-consulting/" target="_blank" rel="noopener noreferrer" aria-label="Vérité on LinkedIn">
+            <!-- Neutral external-link icon (not the LinkedIn brand mark). Paste LinkedIn's official brand SVG here to use the exact logo. -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="9" y1="15" x2="15" y2="9"/><polyline points="10 9 15 9 15 14"/></svg>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© <span id="footer-year">2026</span> Vérité Consulting. All rights reserved.</span>
-      <span class="sep" aria-hidden="true">·</span>
-      <span>London, UK</span>
-      <span class="sep" aria-hidden="true">·</span>
-      <a href="/privacy/">Privacy</a>
-      <span class="cookie-link" hidden><span class="sep" aria-hidden="true">·</span><button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button></span>
+    <div class="footer__bottom label-sm">
+      <div class="footer__legal">
+        <span>© <span id="footer-year">2026</span> Vérité Consulting. All rights reserved.</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span>London, UK</span>
+      </div>
+      <span class="sep footer__split" aria-hidden="true">·</span>
+      <div class="footer__legal">
+        <a href="/privacy/">Privacy</a>
+        <span class="cookie-link" hidden><span class="sep" aria-hidden="true">·</span><button type="button" class="cookie-settings" data-cookie-settings>Cookie settings</button></span>
+      </div>
     </div>
   </div>
 </footer>
-<script src="/assets/js/site.js?v=20261008b"></script>
-<script src="/assets/js/consent.js?v=20261015a"></script>
+<script src="/assets/js/site.js?v=20261116a"></script>
+<script src="/assets/js/consent.js?v=20261116a"></script>
 <script src="/assets/js/hero-net.js?v=20261008h"></script>
 </body>
 </html>
