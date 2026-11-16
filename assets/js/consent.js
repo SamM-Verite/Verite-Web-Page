@@ -42,8 +42,8 @@
       '<p class="consent__text">We\'d like to use cookies from Apollo.io to see which companies visit our website. ' +
       'They only run if you accept. <a href="/privacy/#cookies">Privacy policy</a></p>' +
       '<div class="consent__actions">' +
-        '<button type="button" class="btn btn-ghost btn-sm" data-consent="declined">Decline</button>' +
-        '<button type="button" class="btn btn-ghost btn-sm" data-consent="accepted">Accept</button>' +
+        '<button type="button" class="btn btn--secondary btn--sm btn--plain" data-consent="declined">Decline</button>' +
+        '<button type="button" class="btn btn--secondary btn--sm btn--plain" data-consent="accepted">Accept</button>' +
       '</div>';
     banner.addEventListener('click', function(e){
       var b = e.target.closest ? e.target.closest('[data-consent]') : null;
